@@ -1,0 +1,6 @@
+192.168.1.1 GET /home 200
+192.168.1.2 GET /about 200
+192.168.1.1 POST /login 401
+192.168.1.3 GET /home 200
+192.168.1.2 GET /contact 200
+192.168.1.1 GET /dashboard 500

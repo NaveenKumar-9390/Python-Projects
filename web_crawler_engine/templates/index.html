@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Search Engine</title>
+</head>
+<body>
+    <h1>Mini Search Engine</h1>
+
+    <form method="post">
+        <input type="text" name="query" placeholder="Enter keyword" required>
+        <button type="submit">Search</button>
+    </form>
+
+    <hr>
+
+    {% if results %}
+        <h2>Results:</h2>
+        <ul>
+            {% for page in results %}
+                <li>
+                    <b>{{ page.title }}</b><br>
+                    <a href="{{ page.url }}" target="_blank">{{ page.url }}</a>
+                </li>
+                <br>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
